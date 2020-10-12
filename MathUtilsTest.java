@@ -18,8 +18,9 @@ MathUtil calc;
 //		Create instance of class
 		System.out.println("Starting to creat object");
 		MathUtil calc = new MathUtil();
-		System.out.println("Created object");
+		System.out.println("Created object");//Created object
 	}
+	
 	
 //	Annotation
 //	identifies what methods are to be run as test.
