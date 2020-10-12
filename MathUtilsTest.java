@@ -1,0 +1,50 @@
+package test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import main.MathUtil;
+
+@DisplayName("Math Util")
+class MathUtilsTest {
+MathUtil calc;
+
+//	SET UP
+	@BeforeEach
+	void setUp() {
+//		Create instance of class
+		System.out.println("Starting to creat object");
+		MathUtil calc = new MathUtil();
+		System.out.println("Created object");
+	}
+	
+//	Annotation
+//	identifies what methods are to be run as test.
+	@Test
+	void testAdd() {
+//		Create instance of class
+		calc = new MathUtil();
+		
+//		Expected
+			int expected = 2;
+//		Actual
+			int actual = calc.add(1, 1);
+//		Verify
+			assertEquals(calc.add(1,1), 2, "add should return 2");
+	}
+
+	@Test
+	@DisplayName ("isOdd return true for odd values")
+	void testIsOdd() {
+//		Create instance of class 
+		calc = new MathUtil();
+//		expected
+//		actual
+		boolean actual = calc.isOdd(3);
+//		verify
+		assertTrue(actual);
+	}
+}
